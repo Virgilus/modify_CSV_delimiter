@@ -3,13 +3,13 @@
 
 import csv
 
-print ("Ce programme vous permet de modifier les séparateurs d'un fichier CSV")
+print ("Ce programme vous permet de modifier les séparateurs d'un fichier CSV.")
 
-PathFileInput = input("Entrez le chemin du CSV que vous désirez modifier")
-Separator = input("Entrez le type de séparateur actuel de votre fichier CSV")
+PathFileInput = input("Entrez le chemin du CSV que vous désirez modifier :  ")
+Separator = input("Entrez le type de séparateur actuel de votre fichier CSV :  ")
 
-NewSeparator = input("Entrez le nouveau type de séparateur pour votre nouveau fichier CSV")
-PathFileOutput = input("Entrez le chemin du CSV que vous désirez créer, en terminant par .csv")
+NewSeparator = input("Entrez le nouveau type de séparateur pour votre nouveau fichier CSV :  ")
+PathFileOutput = input("Entrez le chemin du CSV que vous désirez créer, en terminant par .csv :  ")
 
 with open(PathFileInput, newline='', encoding='utf-8') as csvfile:  
     f_i = csv.reader(csvfile, delimiter=Separator, quotechar='|')
