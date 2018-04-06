@@ -12,7 +12,7 @@ NewSeparator = input("Entrez le nouveau type de séparateur pour votre nouveau f
 PathFileOutput = input("Entrez le chemin du CSV que vous désirez créer, en terminant par .csv :  ")
 
 with open(PathFileInput, newline='', encoding='utf-8') as csvfile:  
-    f_i = csv.reader(csvfile, delimiter=Separator, quotechar='|')
+    f_i = csv.reader(csvfile, delimiter=Separator, quotechar='"')
     
     with open(PathFileOutput, 'w', newline='', encoding='utf-8') as csvfile_2:  
         f_o = csv.writer(csvfile_2, delimiter=NewSeparator, quotechar='"')
